@@ -1,0 +1,75 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FACTURA DE COMPRA</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      .nomNegocio {
+        padding-left: 50%;
+      }
+      header {
+        margin-bottom: 40px;
+      }
+      .provider-info,
+      .invoice-info {
+        margin-bottom: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      .total {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1></h1>
+      <div class="provider-info">
+        <b><p class="nomNegocio">Nombre: @nombre</p></b>
+        <p>RUC: @RUC</p>
+        <p>Dirección: @Direccion</p>
+      </div>
+      <div class="invoice-info">
+        <p>Número de Compra: @NumCompra</p>
+        <p>Proveedor: @NombreProveedor @ApellidoProveedor</p>
+        <p>Fecha: @Fecha</p>
+        <p>Usuario: @Usuario</p>
+      </div>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <td>Producto</td>
+          <td>Cantidad</td>
+          <td>Precio Unitario</td>
+          <td>Subtotal</td>
+        </tr>
+      </thead>
+      <tbody>
+        @filas
+      </tbody>
+    </table>
+    <div class="total">Total: @Total</div>
+  </body>
+</html>

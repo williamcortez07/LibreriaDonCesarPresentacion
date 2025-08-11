@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Factura de Compra</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 40px;
+        font-size: 14px;
+        color: #333;
+      }
+      header {
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        overflow: auto;
+      }
+
+      .header-text {
+        margin-left: 170px;
+      }
+
+      .header-text h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      .provider-info .invoice-info {
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+      .invoice-info {
+        text-align: right;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f0f0f0;
+        text-align: center;
+      }
+      td.numeric {
+        text-align: right;
+      }
+      .total {
+        margin-top: 20px;
+        text-align: right;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+      }
+      .signature {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .signature div {
+        width: 30%;
+        border-top: 1px solid #000;
+        text-align: center;
+        padding-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+      <div class="header-text">
+        <h1>FACTURA DE COMPRA</h1>
+
+        <div class="provider-info">
+          <p><strong>Nombre:</strong>@nombre</p>
+          <p><strong>RUC:</strong>@RUC</p>
+          <p><strong>Dirección:</strong>@Direccion</p>
+        </div>
+        <div class="invoice-info">
+          <p><strong>Número de Compra:</strong>@NumCompra</p>
+          <p><strong>Proveedor:</strong>@NombreProveedor @ApellidoProveedor</p>
+          <p><strong>Fecha:</strong>@Fecha</p>
+          <p><strong>Usuario:</strong>@Usuario</p>
+        </div>
+      </div>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        filas
+      </tbody>
+    </table>
+    <div class="total">Total: @Total</div>
+    <div class="signature">
+      <div>Firma del Proveedor</div>
+      <div>Firma del Usuario</div>
+    </div>
+    <div class="footer">
+      2025 Librería Don César. Todos los derechos reservados.
+    </div>
+  </body>
+</html>
